@@ -2,24 +2,26 @@
   "name": "vuelegant",
   "version": "0.1.0",
   "description": "A elegant vue ui component library",
-  "private": false,
-  "main": "./dist/personal-component-set.common.js",
+  "author": "prozac",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luvsunlight/vuelegant.git"
+  },
+  "homepage": "https://github.com/luvsunlight/vuelegant/blob/master/README.md",
+  "main": "./dist/vuelegant.common.js",
   "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
+    "src/*"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name personal-component-set ./src/components/index.js",
+    "serve": "vue-cli-service serve --open ./examples/main.js",
+    "build": "vue-cli-service build --target lib --name vuelegant ./src/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "nprogress": "^0.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
