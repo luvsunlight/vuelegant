@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="nav">
-        {{DemoName}}
+      {{DemoName}}
       <span class="back" @click="$router.push('/')">Back</span>
     </div>
     <router-view/>
@@ -33,7 +33,7 @@ export default {
 }
 
 .nav {
-    position:relative;
+  position: relative;
   height: 30px;
   background: #1abc9c;
   color: #fff;

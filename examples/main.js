@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import vuelegant from '@'
+
+Vue.use(vuelegant)
 
 Vue.config.productionTip = false
 

@@ -1,6 +1,11 @@
 <template>
     <div class='container'>
-        <router-link to="/Button">Button</router-link>
+        <div class="link">
+            <router-link to="/Button">Button</router-link>
+        </div>
+        <div class="link">
+            <router-link to="/Icon">Icon</router-link>
+        </div>
     </div>
 </template>
 

@@ -1,7 +1,9 @@
 import Vue from "vue"
-import Button from "./components/Button/"
 
-const components = [Button]
+import Button from "./components/Button/"
+import Icon from './components/Icon'
+
+const components = [Button, Icon]
 
 const install = function(Vue, opts = {}) {
     components.map(component => {
@@ -21,7 +23,7 @@ components.forEach(component => {
     }
 })
 
-export { install, Button }
+export { install, Button, Icon }
 
 export default {
     install

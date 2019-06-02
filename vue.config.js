@@ -1,4 +1,3 @@
 module.exports = {
-    // outputDir: "./examples",
-    // indexPath: 'index.html'
+    transpileDependencies: [/\bvue-awesome\b/]
 }

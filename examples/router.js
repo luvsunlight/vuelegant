@@ -16,7 +16,12 @@ const router = new Router({
             path: "/Button",
             name: "Button",
             component: () => import("./Pages/Button.vue")
-        }
+        },
+        {
+            path: "/Icon",
+            name: "Icon",
+            component: () => import("./Pages/Icon.vue")
+        },
     ]
 })
 
