@@ -1,3 +1,9 @@
+## 概述
+
+> Color 颜色
+
+## props
+
 ```css
 @color-primary: #1abc9c;
 @color-success: #2ecc71;

@@ -1,0 +1,10 @@
+@lightenPercent: 20%;
+@darkenPercent: 20%;
+
+.border-lighten(@color, @percent: @lightenPercent) {
+	border: 1px solid lighten(@color, @percent);
+}
+
+.border-darken(@color, @percent: @darkenPercent) {
+	border: 1px solid darken(@color, @percent);
+}

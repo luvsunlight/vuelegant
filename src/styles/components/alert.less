@@ -1,0 +1,55 @@
+.alert {
+	.vertical-center;
+	.anim-fast;
+	position: relative;
+	margin: @offset-base;
+	padding: @offset-base;
+	border: 1px solid @color-primary;
+	border-radius: @border-radius-base;
+	background: @color-primary;
+	text-align: left;
+	overflow: hidden;
+
+	&-success {
+		.alert-mixin(@color-success);
+	}
+
+	&-info {
+		.alert-mixin(@color-info);
+	}
+
+	&-warning {
+		.alert-mixin(@color-warning);
+	}
+
+	&-error {
+		.alert-mixin(@color-error);
+	}
+
+	&-wrap {
+		.vertical-center;
+		position: relative;
+		width: 100%;
+	}
+
+	&-icon {
+		.vertical-center;
+	}
+
+	&-desc {
+		font-size: @font-size-large;
+		font-weight: bold;
+	}
+
+	&-close {
+		.vertical-center;
+		.anim-normal;
+		position: absolute;
+		right: 20px;
+		color: @color-black;
+
+		&:hover {
+			color: lighten(@color-black, 30%);
+		}
+	}
+}

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <div class="nav">
-      {{DemoName}}
-      <span class="back" @click="$router.push('/')">Back</span>
+      {{navText}}
+      <span class="back" @click="$router.push('/Home')">
+        <Icon name="home"></Icon>Home
+      </span>
     </div>
     <router-view/>
   </div>
@@ -13,36 +15,51 @@ export default {
   name: "App",
   data() {
     return {
-      DemoName: "DEMO展示"
+      navText: ""
     };
+  },
+  created() {
+    console.log(this);
+  },
+  watch: {
+    "$route.name"(v) {
+      this.navText = v;
+    }
   }
 };
 </script>
 
 <style lang="less">
-* {
-  margin: 0;
-}
-
 #app {
-  color: #2c3e50;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  padding-top: 80px;
 }
 
 .nav {
-  position: relative;
-  height: 30px;
-  background: #1abc9c;
-  color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #dedede;
+  box-shadow: 0 1px 6px #ddd;
   line-height: 30px;
+  background: #fff;
+  z-index: 10000;
+
   .back {
+    transition: all 0.5s;
     position: absolute;
     left: 10px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+
     &:hover {
-      font-weight: bold;
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 20px #ccc;
     }
   }
 }

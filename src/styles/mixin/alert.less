@@ -1,0 +1,8 @@
+.alert-mixin(@color) {
+	.alert-icon {
+		color: darken(@color, @darkeness-large);
+	}
+	border: 1px solid @color;
+	background: @color;
+	color: darken(@color, @darkeness-large);
+}
