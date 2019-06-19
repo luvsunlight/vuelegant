@@ -1,0 +1,46 @@
+@small-factor: 0.7;
+@large-factor: 1.3;
+
+.avatar {
+	display: inline-block;
+	background: @avatar-bg;
+	text-align: center;
+
+	&-circle {
+		border-radius: @border-radius-circle;
+	}
+
+	&-square {
+		border-radius: @border-radius-base;
+	}
+
+	&-small {
+		width: @avatar-width * @small-factor;
+		height: @avatar-height* @small-factor;
+		line-height: @avatar-height* @small-factor;
+	}
+
+	&-base {
+		width: @avatar-width;
+		height: @avatar-height;
+		line-height: @avatar-height;
+	}
+
+	&-large {
+		width: @avatar-width * @large-factor;
+		height: @avatar-height* @large-factor;
+		line-height: @avatar-height* @large-factor;
+	}
+
+	&-icon {
+		color: @avatar-color;
+	}
+
+	&-img {
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		background: @avatar-color;
+		box-shadow: @shadow-base;
+	}
+}

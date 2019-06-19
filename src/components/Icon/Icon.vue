@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import Vue from "vue";
 import vIcon from "vue-awesome/components/Icon";
 import "vue-awesome/icons/index.js";
+import { validColor } from "../../util/base";
 
 const prefixCls = "icon";
 
@@ -15,11 +15,16 @@ export default {
   props: {
     name: {
       type: String,
-      default: "search"
+      default: "cog"
     },
     scale: {
       type: Number,
       default: 1
+    },
+    color: {
+      type: String,
+      default: "",
+      validator: validColor
     },
     inverse: {
       type: Boolean,
@@ -32,7 +37,11 @@ export default {
   },
   computed: {
     classes() {
-      return [prefixCls, this.pointer ? `${prefixCls}-pointer` : ""];
+      return [
+        prefixCls,
+        this.pointer ? "cursor-pointer" : "",
+        this.color ? `${prefixCls}-color-${this.color}` : ""
+      ];
     }
   }
 };

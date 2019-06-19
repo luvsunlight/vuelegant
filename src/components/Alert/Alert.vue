@@ -28,7 +28,7 @@
 <script>
 import Anim from "../../animation/BaseAnim";
 import Icon from "../Icon";
-import oneOf from "../../util/index";
+import { validStatus } from "../../util/index";
 
 const prefixCls = "alert";
 export default {
@@ -38,7 +38,7 @@ export default {
     type: {
       type: String,
       default: "info",
-      validator: value => oneOf(value, ["info", "success", "warning", "error"])
+      validator: validStatus
     },
     closable: {
       type: Boolean,
@@ -111,6 +111,3 @@ export default {
   }
 };
 </script>
-
-<style lang='less' scoped>
-</style>

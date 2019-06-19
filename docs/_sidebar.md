@@ -1,22 +1,28 @@
 -   [安装](install)
 
+-   [更新日志](log)
+
 -   组件
 
     -   基础
-    -   [Color 颜色](color)
-    -   [Font 字体](font)
-    -   [Icon 图标](Icon)
-    -   [Button 按钮](button)
 
--   布局
+        -   [Color 颜色](color)
+        -   [Font 字体](font)
+        -   [Icon 图标](Icon)
+        -   [Button 按钮](button)
 
-    -   [Card 卡片](card)
+    -   布局
 
--   视图
+        -   [Card 卡片](card)
 
-    -   [Alert 警告](alert)
-    -   [Tag 标签](Tag)
+    -   视图
 
--   其他
+        -   [Alert 警告](alert)
+        -   [Avatar 头像](avatar)
+        -   [Badge 徽标](badge)
+        -   [Tag 标签](Tag)
 
-    -   [Affix 图钉](affix)
+    -   其他
+
+        -   [Affix 图钉](affix)
+        -   [Divider 分割线](divider)

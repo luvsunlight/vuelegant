@@ -10,24 +10,9 @@
 <script>
 import Icon from "../Icon";
 import Anim from "../../animation/BaseAnim";
-import oneOf from "../../util/index";
+import { validColor } from "../../util/index";
 
 const prefixCls = "tag";
-const colorSet = [
-  "primary",
-  "success",
-  "info",
-  "warning",
-  "error",
-  "red",
-  "blue",
-  "green",
-  "purple",
-  "grey",
-  "pink",
-  "yellow",
-  "orange"
-];
 
 export default {
   name: "Tag",
@@ -52,8 +37,7 @@ export default {
     color: {
       type: String,
       default: "",
-      validator: value =>
-        !value || oneOf(value, colorSet) || value.indexOf("#") !== -1
+      validator: validColor
     }
   },
   data() {
@@ -97,5 +81,3 @@ export default {
 };
 </script>
 
-<style lang='less' scoped>
-</style>

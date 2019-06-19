@@ -1,0 +1,57 @@
+@circle-size: @switch-height - 2 * @offset-tiny;
+
+.switch {
+	.anim-normal;
+	display: inline-block;
+	position: relative;
+	min-width: @switch-width;
+	height: @switch-height;
+	margin: 0 @offset-tiny;
+	border-radius: @switch-height;
+	line-height: @switch-height;
+	color: @color-white;
+
+	&-checked {
+		background: @switch-color-on;
+	}
+
+	&-unchecked {
+		background: @switch-color-off;
+	}
+
+	&-on {
+		float: left;
+		padding: 0 @offset-base;
+	}
+
+	&-off {
+		float: right;
+		padding: 0 @offset-base;
+	}
+
+	&-circle {
+		.anim-normal;
+		.cursor-pointer;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		width: @circle-size;
+		height: @circle-size;
+		margin: @offset-tiny;
+		border-radius: @border-radius-circle;
+		background: @color-white;
+
+		&-checked {
+			left: @switch-width - @circle-size - 2 * @offset-tiny;
+		}
+
+		&-disabled {
+			.cursor(not-allowed);
+		}
+	}
+
+	&-disabled {
+		background: @switch-color-disabled;
+		.cursor(not-allowed);
+	}
+}

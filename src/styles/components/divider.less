@@ -1,0 +1,51 @@
+.divider {
+	position: relative;
+	text-align: center;
+
+	&-horizonal {
+		.vertical-center;
+		margin: @offset-large 0;
+	}
+
+	&-vertical {
+		display: inline-block;
+		margin: 0 @offset-base;
+		width: 0;
+	}
+
+	&-line {
+		position: absolute;
+		width: 100%;
+		z-index: -1;
+
+		&-horizonal {
+			border-top: @border-base;
+		}
+
+		&-vertical {
+			position: relative;
+			top: 0.3em;
+			height: @length-large;
+			border-left: @border-base;
+		}
+
+		&-dashed {
+			border-top: 1px dashed @border-color;
+		}
+	}
+
+	&-text {
+		position: relative;
+		margin: 0 auto;
+		padding: 0 @offset-base;
+		background: @color-white;
+
+		&-left {
+			right: 20%;
+		}
+
+		&-right {
+			left: 20%;
+		}
+	}
+}

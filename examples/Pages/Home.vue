@@ -1,26 +1,18 @@
 <template>
   <div class="home">
-    <Card hoverable center>
-      <router-link to="/Color">Color</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Button">Button</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Icon">Icon</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Card">Card</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Affix">Affix</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Alert">Alert</router-link>
-    </Card>
-    <Card hoverable center>
-      <router-link to="/Tag">Tag</router-link>
-    </Card>
+    <Card hoverable center pointer @click.native="$router.push('/Color')">Color</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Button')">Button</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Icon')">Icon</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Card')">Card</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Affix')">Affix</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Alert')">Alert</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Tag')">Tag</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Divider')">Divider</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Badge')">Badge</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Avatar')">Avatar</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Switch')">Switch</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Progress')">Progress</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Spin')">Spin</Card>
   </div>
 </template>
 
@@ -28,9 +20,3 @@
 export default {};
 </script>
 
-<style lang='less' scoped>
-.home {
-  // display: flex;
-  // padding-top: 20px;
-}
-</style>

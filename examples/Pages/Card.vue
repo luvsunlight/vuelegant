@@ -10,13 +10,10 @@
     </Card>
     <Card title="title" :headStyle="headStyle">修改headStyle</Card>
     <Card title="title" :bodyStyle="bodyStyle">修改bodyStyle</Card>
+    <Card title="title" center>直接修改center</Card>
     <Card>没有title</Card>
     <Card title="title" :hoverable="true">hoverable:true</Card>
-    <Card
-      title="title"
-      :bordered="false"
-      style="background:#1abc9c;color:#fff"
-    >bordered:false(适合其他背景)</Card>
+    <Card title="title" :bordered="false" color="success">bordered:false(适合其他背景)</Card>
     <Card title="title">
       <div>
         <img src="../../logo.png" alt="logo">

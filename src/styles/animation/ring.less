@@ -1,0 +1,22 @@
+.anim-ring {
+	.svg {
+		animation: 1.5s spin ease infinite;
+	}
+
+	.ring {
+		fill: none;
+		stroke: lighten(@color-primary, @lighteness-base);
+		stroke-width: 2;
+	}
+
+	.ball {
+		fill: @color-primary;
+		stroke: none;
+	}
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -13,6 +13,12 @@
 @font-family-code: Consolas, Menlo, Courier, monospace;
 
 /*===  Length  ===*/
+@length-tiny: 5px;
+@length-small: 10px;
+@length-base: 15px;
+@length-large: 20px;
+@length-huge: 50px;
+
 @offset-tiny: 3px;
 @offset-small: 5px;
 @offset-base: 10px;
@@ -26,17 +32,49 @@
 @border-radius-small: 3px;
 @border-radius-base: 5px;
 @border-radius-large: 10px;
+@border-radius-circle: 50%;
 
 /*===  Shadow  ===*/
-@shadow-color: rgba(0, 0, 0, 0.2);
+@shadow-color: #bbb;
 @shadow-base: 0 1px 1px @shadow-color;
-@shadow-large: 0 1px 20px @shadow-color;
+@shadow-large: 0 2px 10px lighten(@shadow-color, 0);
+@shadow-huge: 0 3px 20px lighten(@shadow-color, @lighteness-base);
 
 /*===  Lighten && Darken  ===*/
-@lighteness-base: 20%;
-@lighteness-large: 50%;
+@lighteness-tiny: 5%;
 @lighteness-small: 10%;
+@lighteness-base: 15%;
+@lighteness-large: 30%;
+@lighteness-huge: 40%;
 
-@darkeness-base: 20%;
-@darkeness-large: 50%;
+@darkeness-tiny: 5%;
 @darkeness-small: 10%;
+@darkeness-base: 15%;
+@darkeness-large: 30%;
+@darkeness-huge: 40%;
+
+/*===  Avatar  ===*/
+@avatar-width: 50px;
+@avatar-height: @avatar-width;
+@avatar-bg: lighten(@color-grey, @lighteness-large * 0.9);
+@avatar-color: @color-white;
+
+/*===  Switch  ===*/
+@switch-width: 60px;
+@switch-height: 30px;
+@switch-color-on: @color-success;
+@switch-color-off: @color-grey;
+@switch-color-disabled: lighten(@switch-color-on, @lighteness-large);
+
+/*===  Progress  ===*/
+@progress-height: @length-small;
+@progress-color: @color-primary;
+@progress-color-full: @color-success;
+
+/*===  Spin  ===*/
+@spin-width-small: @length-large;
+@spin-width-base: @length-huge;
+@spin-width-large: @length-huge * 2;
+
+/*===  ZIndex  ===*/
+@zIndex-spin: 100000;

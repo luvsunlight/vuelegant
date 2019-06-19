@@ -1,8 +1,8 @@
 <template>
   <div :class="classes" :style="styles">
     <div :class="navClasses" v-if="title || extra">
-      <span class="navTitleClasses" :style="headStyle">{{title}}</span>
-      <span class="navExtraClasses">
+      <span :class="navTitleClasses" :style="headStyle">{{title}}</span>
+      <span :class="navExtraClasses">
         <slot name="extra">{{extra}}</slot>
       </span>
     </div>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { validColor } from "../../util/index";
 const prefixCls = "card";
 
 export default {
@@ -22,16 +23,13 @@ export default {
       type: String,
       default: ""
     },
-    icon: {
-      type: String,
-      default: ""
-    },
     extra: {
       type: String,
       default: ""
     },
-    width: { type: String, default: "300px" },
+    width: { type: String | Number, default: "300" },
     center: { type: Boolean, default: false },
+    pointer: { type: Boolean, default: false },
     headStyle: {
       type: Object,
       default: () => {}
@@ -42,7 +40,8 @@ export default {
     },
     color: {
       type: String,
-      default: ""
+      default: "",
+      validator: validColor
     },
     bordered: {
       type: Boolean,
@@ -60,12 +59,13 @@ export default {
         this.bordered ? `${prefixCls}-bordered` : "",
         this.hoverable ? `${prefixCls}-hoverable` : "",
         this.color ? `${prefixCls}-color-${this.color}` : "",
-        this.center ? `${prefixCls}-center` : ""
+        this.center ? `${prefixCls}-center` : "",
+        this.pointer ? "cursor-pointer" : ""
       ];
     },
     styles() {
       return {
-        width: this.width
+        width: `${this.width}px`
       };
     },
     navClasses() {

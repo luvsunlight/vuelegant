@@ -1,0 +1,64 @@
+.badge {
+	position: absolute;
+	right: -@length-large / 2;
+	top: -@length-large / 2;
+
+	&-wrap {
+		display: inline-block;
+		position: relative;
+	}
+
+	&-default {
+		position: relative;
+		background: red;
+	}
+
+	&-count {
+		min-width: @length-large;
+		height: @length-large;
+		padding: @offset-small;
+		border-radius: @length-large / 2;
+		color: @color-white;
+		line-height: @length-large - @offset-small * 2;
+		text-align: center;
+		font-size: @font-size-tiny;
+		font-weight: bold;
+	}
+
+	&-dot {
+		right: @length-small / 2;
+		top: @length-small / 2;
+		width: @length-small;
+		height: @length-small;
+		border-radius: @border-radius-circle;
+	}
+
+	&-status {
+		display: inline-block;
+
+		&-primary {
+			background: @color-primary;
+		}
+		&-success {
+			background: @color-success;
+		}
+		&-info {
+			background: @color-info;
+		}
+		&-warning {
+			background: @color-warning;
+		}
+		&-error {
+			background: @color-error;
+		}
+
+		&-dot {
+			display: inline-block;
+			margin: 0 @offset-small;
+			width: @length-small;
+			width: @length-small;
+			height: @length-small;
+			border-radius: @border-radius-circle;
+		}
+	}
+}

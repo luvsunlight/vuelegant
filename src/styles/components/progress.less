@@ -1,0 +1,30 @@
+.progress {
+    .make-color-classes();
+    .anim-normal;
+    height: 100%;
+    margin: @offset-base 0;
+
+    &-full {
+        background: @progress-color-full;
+    }
+
+    &-error {
+        background: @color-error;
+    }
+
+    &-active {
+        .anim-active;
+    }
+
+    &-wrap {
+        position: relative;
+        padding-right: 15%;
+    }
+    &-info {
+        width: 10%;
+        position: absolute;
+        right: 0;
+        color: @text-color;
+        text-align: left;
+    }
+}

@@ -1,14 +1,24 @@
 @colors: primary, success, info, warning, error, red, blue, green, purple, grey,
-	pink, yellow, orange, martina, barared, androidgreen, energos, spray,
-	paradise, dupin, aurora, waterfall, reef, flatflesh, melonmelody;
+    pink, yellow, orange, martina, barared, androidgreen, energos, spray,
+    paradise, dupin, aurora, waterfall, reef, flatflesh, melonmelody, jadedust,
+    freshturquoise, hignlighterpink, whitepaper, keppel;
 
 .make-color-classes(@i: length(@colors)) when (@i > 0) {
-	.make-color-classes(@i - 1);
-	@color: extract(@colors, @i);
-	@colorName: "color-@{color}";
-	&-color-@{color} {
-		background: @@colorName;
-		border: 1px solid @@colorName;
-		color: @color-white;
-	}
+    .make-color-classes(@i - 1);
+    @color: extract(@colors, @i);
+    @colorName: "color-@{color}";
+    &-color-@{color} {
+        background: @@colorName;
+        border: 1px solid @@colorName;
+        color: @color-white;
+    }
+}
+
+.make-color-color-classes(@i: length(@colors)) when (@i > 0) {
+    .make-color-color-classes(@i - 1);
+    @color: extract(@colors, @i);
+    @colorName: "color-@{color}";
+    &-color-@{color} {
+        color: @@colorName;
+    }
 }
