@@ -20,7 +20,9 @@
         -   [Alert 警告](alert)
         -   [Avatar 头像](avatar)
         -   [Badge 徽标](badge)
-        -   [Tag 标签](Tag)
+        -   [Tag 标签](tag)
+        -   [Progress 进度条](progress)
+        -   [Spin 加载中](spin)
 
     -   其他
 

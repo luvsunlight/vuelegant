@@ -14,6 +14,10 @@ const baseAlignSet = ["left", "center", "right"]
 
 const baseSpinSet = ["spin", "jellybox", "ring"]
 
+const baseTheme = ["light", "dark"]
+
+const basePlacement = ["left", "right", "top", "bottom"]
+
 const baseColorSet = [
 	...baseStatusSet,
 	"red",
@@ -52,5 +56,7 @@ export {
 	baseColorSet,
 	baseDirectionSet,
 	baseAlignSet,
-	baseSpinSet
+	baseSpinSet,
+	baseTheme,
+	basePlacement
 }

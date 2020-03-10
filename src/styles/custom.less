@@ -36,7 +36,8 @@
 
 /*===  Shadow  ===*/
 @shadow-color: #bbb;
-@shadow-base: 0 1px 1px @shadow-color;
+@shadow-card: 0 1px 1px @shadow-color;
+@shadow-base: 0 0 5px @shadow-color;
 @shadow-large: 0 2px 10px lighten(@shadow-color, 0);
 @shadow-huge: 0 3px 20px lighten(@shadow-color, @lighteness-base);
 
@@ -76,5 +77,13 @@
 @spin-width-base: @length-huge;
 @spin-width-large: @length-huge * 2;
 
+/*===  Tooltip  ===*/
+@tooltip-height: 16px;
+@tooltip-color-dark: @color-white;
+@tooltip-bg-dark: rgba(0, 0, 0, 0.8);
+@tooltip-color-light: @text-color;
+@tooltip-bg-light: @color-white;
+
 /*===  ZIndex  ===*/
+@zIndex-tooltip: 90000;
 @zIndex-spin: 100000;

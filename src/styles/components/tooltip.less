@@ -1,0 +1,74 @@
+@wrapHeight: @tooltip-height + @offset-base;
+@wrapOffset: 5px;
+
+.tooltip {
+	position: absolute;
+	min-height: @tooltip-height;
+	line-height: @tooltip-height;
+	box-sizing: border-box;
+	border-radius: @border-radius-base;
+	z-index: @zIndex-tooltip;
+
+	&-wrap {
+		position: relative;
+		display: inline-block;
+		margin: 0 @offset-base;
+		border: @border-base;
+	}
+
+	&-arrow {
+		position: absolute;
+		left: 16px;
+		bottom: -5px;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+
+		border-width: 5px 5px 0;
+		border-top-color: @tooltip-bg-dark;
+	}
+
+	&-inner {
+		padding: @offset-base / 2 @offset-base;
+	}
+
+	&-theme {
+		&-dark {
+			background: @tooltip-bg-dark;
+			color: @tooltip-color-dark;
+		}
+
+		&-light {
+			background: @tooltip-bg-light;
+			color: @tooltip-color-light;
+			box-shadow: @shadow-base;
+		}
+	}
+
+	&-placement {
+		&-top {
+			left: 0;
+			top: 0;
+			margin-top: -@wrapHeight - @offset-base;
+		}
+
+		&-bottom {
+			left: 0;
+			bottom: 0;
+			margin-bottom: -@wrapHeight;
+		}
+
+		&-left {
+			right: 0;
+			top: 0;
+			margin-right: 100%;
+		}
+
+		&-right {
+			left: 0;
+			top: 0;
+			margin-left: 100%;
+		}
+	}
+}

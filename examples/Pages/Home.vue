@@ -13,6 +13,7 @@
     <Card hoverable center pointer @click.native="$router.push('/Switch')">Switch</Card>
     <Card hoverable center pointer @click.native="$router.push('/Progress')">Progress</Card>
     <Card hoverable center pointer @click.native="$router.push('/Spin')">Spin</Card>
+    <Card hoverable center pointer @click.native="$router.push('/Tooltip')">Tooltip</Card>
   </div>
 </template>
 

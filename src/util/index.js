@@ -6,7 +6,9 @@ import {
 	baseShapeSet,
 	baseDirectionSet,
 	baseAlignSet,
-	baseSpinSet
+	baseSpinSet,
+	baseTheme,
+	basePlacement
 } from "./base"
 
 const validatorFactory = function(name, lib) {
@@ -38,6 +40,10 @@ const validAlign = validatorFactory("validAlign", baseAlignSet)
 
 const validSpin = validatorFactory("validSpin", baseSpinSet)
 
+const validTheme = validatorFactory("validTheme", baseTheme)
+
+const validPlacement = validatorFactory("validPlacement", basePlacement)
+
 export {
 	oneOf,
 	validColor,
@@ -47,5 +53,7 @@ export {
 	validShape,
 	validDirection,
 	validAlign,
-	validSpin
+	validSpin,
+	validTheme,
+	basePlacement
 }

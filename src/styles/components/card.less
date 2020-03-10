@@ -1,46 +1,46 @@
 .card {
-    .anim-normal;
-    display: inline-block;
-    margin: @offset-base @offset-base;
-    padding: @offset-base;
-    border-radius: @border-radius-base;
-    text-align: left;
-    box-shadow: @shadow-base;
+	.anim-normal;
+	display: inline-block;
+	margin: @offset-base @offset-base;
+	padding: @offset-base;
+	border-radius: @border-radius-base;
+	text-align: left;
+	box-shadow: @shadow-card;
 
-    &-bordered {
-        border: @border-base;
-    }
+	&-bordered {
+		border: @border-base;
+	}
 
-    &:not(&-bordered) {
-        &-nav {
-            border-bottom: 1px solid @color-white!important;
-        }
-    }
+	&:not(&-bordered) {
+		&-nav {
+			border-bottom: 1px solid @color-white!important;
+		}
+	}
 
-    // TODO ^
+	// TODO ^
 
-    &-hoverable:hover {
-        box-shadow: @shadow-large;
-    }
+	&-hoverable:hover {
+		box-shadow: @shadow-large;
+	}
 
-    &-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: @border-base;
-        &-title {
-            font-size: @font-size-large;
-            font-weight: bold;
-        }
-    }
+	&-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: @border-base;
+		&-title {
+			font-size: @font-size-large;
+			font-weight: bold;
+		}
+	}
 
-    &-content {
-        margin: @offset-base 0;
-    }
+	&-content {
+		margin: @offset-base 0;
+	}
 
-    &-center {
-        text-align: center;
-    }
+	&-center {
+		text-align: center;
+	}
 
-    .make-color-classes();
+	.make-color-classes();
 }
